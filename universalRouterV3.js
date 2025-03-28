@@ -150,7 +150,7 @@ async function getBalances() {
 
 // Buy tokens: Swap BNB/WBNB for tokens
 async function buyTokens() {
-    console.log("🚀 Starting PancakeSwap V3 Buy Operation");
+    console.log("🚀 Starting UniversalSwap V3 Buy Operation");
 
     // Get initial balances
     const initialBalances = await getBalances();
@@ -188,7 +188,7 @@ async function buyTokens() {
     }
 
     // Step 2: Approve WBNB for router
-    console.log("🔓 Approving WBNB for PancakeSwap V3 Router...");
+    console.log("🔓 Approving WBNB for UniversalSwap V3 Router...");
     try {
         const maxApproval = '115792089237316195423570985008687907853269984665640564039457584007913129639935'; // 2^256 - 1
 
@@ -257,7 +257,7 @@ async function buyTokens() {
 
 // Sell tokens: Swap tokens for BNB/WBNB
 async function sellTokens() {
-    console.log("🚀 Starting PancakeSwap V3 Sell Operation");
+    console.log("🚀 Starting UniversalSwap V3 Sell Operation");
 
     // Get initial balances
     const initialBalances = await getBalances();
@@ -281,7 +281,7 @@ async function sellTokens() {
     console.log(`📊 Selling ${config.sellPercentage}% of ${initialBalances.symbol} tokens (${web3.utils.fromWei(sellAmount.toString(), 'ether')} tokens)`);
 
     // Step 1: Approve tokens for router
-    console.log("🔓 Approving tokens for PancakeSwap V3 Router...");
+    console.log("🔓 Approving tokens for UniversalSwap V3 Router...");
     try {
         const maxApproval = '115792089237316195423570985008687907853269984665640564039457584007913129639935'; // 2^256 - 1
 
@@ -353,7 +353,7 @@ async function main() {
     const args = process.argv.slice(2);
     const operation = args[0] || "help"; // Default to help if no operation specified
 
-    console.log("=== PancakeSwap V3 Trading Bot ===");
+    console.log("=== UniversalSwap V3 Trading Bot ===");
     console.log(`🔗 Network: BSC Mainnet`);
     console.log(`👛 Wallet: ${myAddress}`);
     console.log(`🎯 Token: ${config.token}`);
@@ -389,9 +389,9 @@ async function main() {
         else {
             // Show help
             console.log("\n📚 AVAILABLE COMMANDS:");
-            console.log("  node pancakeswap-v3-buy-sell.js buy    - Buy tokens with BNB");
-            console.log("  node pancakeswap-v3-buy-sell.js sell   - Sell tokens for WBNB");
-            console.log("  node pancakeswap-v3-buy-sell.js balance - Show current balances");
+            console.log("  node UniversalSwap-v3-buy-sell.js buy    - Buy tokens with BNB");
+            console.log("  node UniversalSwap-v3-buy-sell.js sell   - Sell tokens for WBNB");
+            console.log("  node UniversalSwap-v3-buy-sell.js balance - Show current balances");
             console.log("\nCONFIGURATION OPTIONS (edit in code):");
             console.log(`  Token: ${config.token}`);
             console.log(`  Buy amount: ${config.buyAmount} BNB`);

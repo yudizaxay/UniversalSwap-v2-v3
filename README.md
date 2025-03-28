@@ -60,7 +60,7 @@ UNIVERSALSWAP-V2-V3/
 ├── .env.example         # Example environment variables
 ├── .gitignore           # Git ignore file
 ├── LICENSE              # MIT License
-├── pancakeswapUniversal.js  # Main universal Swap script
+├── universalSwap.js  # Main universal Swap script
 ├── README.md            # This file
 ├── universalRouterV2.js # Dedicated V2 router implementation
 └── universalRouterV3.js # Dedicated V3 router implementation
@@ -106,23 +106,23 @@ GAS_LIMIT=500000
 The main script supports both V2 and V3 operations:
 
 ```bash
-node pancakeswapUniversal.js <operation> <version> [amount/percentage]
+node universalSwap.js <operation> <version> [amount/percentage]
 ```
 
 Examples:
 
 ```bash
 # Buy tokens using V2 (0.1 BNB)
-node pancakeswapUniversal.js buy v2 0.1
+node universalSwap.js buy v2 0.1
 
 # Buy tokens using V3 (default BNB amount from .env)
-node pancakeswapUniversal.js buy v3
+node universalSwap.js buy v3
 
 # Sell 50% of tokens using V2
-node pancakeswapUniversal.js sell v2 50
+node universalSwap.js sell v2 50
 
 # Sell all tokens using V3 (100%)
-node pancakeswapUniversal.js sell v3
+node universalSwap.js sell v3
 ```
 
 ### Using Dedicated Router Files
@@ -166,7 +166,7 @@ node universalRouterV3.js sell 50
 For interactive Swap with step-by-step prompts:
 
 ```bash
-node pancakeswapUniversal.js
+node universalSwap.js
 ```
 
 ## ⛽ Gas Fee Optimization

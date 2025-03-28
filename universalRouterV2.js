@@ -5,7 +5,7 @@ require('dotenv').config();
 const config = {
     wbnb: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
     token: '0x503Fa24B7972677F00C4618e5FBe237780C1df53', // Target token (change this to your V2 token)
-    routerV2: '0x10ED43C718714eb63d5aA57B78B54704E256024E', // PancakeSwap V2 Router
+    routerV2: '0x10ED43C718714eb63d5aA57B78B54704E256024E', // UniversalSwap V2 Router
     buyAmount: '0.0001', // BNB amount to swap when buying
     sellPercentage: 100, // Percentage of tokens to sell (100 = all)
     slippage: 1, // Slippage tolerance in percentage (1 = 1%)
@@ -146,7 +146,7 @@ async function getBalances() {
 
 // Buy tokens with BNB (V2)
 async function buyTokensV2() {
-    console.log("🚀 Starting PancakeSwap V2 Buy Operation");
+    console.log("🚀 Starting UniversalSwap V2 Buy Operation");
 
     // Get initial balances
     const initialBalances = await getBalances();
@@ -217,7 +217,7 @@ async function buyTokensV2() {
 
 // Sell tokens for BNB (V2)
 async function sellTokensV2() {
-    console.log("🚀 Starting PancakeSwap V2 Sell Operation");
+    console.log("🚀 Starting UniversalSwap V2 Sell Operation");
 
     // Get initial balances
     const initialBalances = await getBalances();
@@ -242,7 +242,7 @@ async function sellTokensV2() {
 
     try {
         // Step 1: Approve tokens for router
-        console.log("🔓 Approving tokens for PancakeSwap V2 Router...");
+        console.log("🔓 Approving tokens for UniversalSwap V2 Router...");
         const maxApproval = '115792089237316195423570985008687907853269984665640564039457584007913129639935'; // 2^256 - 1
 
         const approveTx = await token.methods.approve(config.routerV2, maxApproval).send({
@@ -315,7 +315,7 @@ async function main() {
     const args = process.argv.slice(2);
     const operation = args[0] || "help"; // Default to help if no operation specified
 
-    console.log("=== PancakeSwap V2 Trading Bot ===");
+    console.log("=== UniversalSwap V2 Trading Bot ===");
     console.log(`🔗 Network: BSC Mainnet`);
     console.log(`👛 Wallet: ${myAddress}`);
     console.log(`🎯 Token: ${config.token}`);
@@ -350,9 +350,9 @@ async function main() {
         else {
             // Show help
             console.log("\n📚 AVAILABLE COMMANDS:");
-            console.log("  node pancakeswap-v2-buy-sell.js buy    - Buy tokens with BNB");
-            console.log("  node pancakeswap-v2-buy-sell.js sell   - Sell tokens for BNB");
-            console.log("  node pancakeswap-v2-buy-sell.js balance - Show current balances");
+            console.log("  node UniversalSwap-v2-buy-sell.js buy    - Buy tokens with BNB");
+            console.log("  node UniversalSwap-v2-buy-sell.js sell   - Sell tokens for BNB");
+            console.log("  node UniversalSwap-v2-buy-sell.js balance - Show current balances");
             console.log("\nCONFIGURATION OPTIONS (edit in code):");
             console.log(`  Token: ${config.token}`);
             console.log(`  Buy amount: ${config.buyAmount} BNB`);

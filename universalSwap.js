@@ -198,7 +198,7 @@ async function getBalances(tokenAddress, wallet) {
 
 // Buy tokens using V2
 async function buyTokensV2(tokenAddress, amount, wallet) {
-    console.log("🚀 Starting PancakeSwap V2 Buy Operation");
+    console.log("🚀 Starting UniversalSwap V2 Buy Operation");
 
     const routerV2 = new web3.eth.Contract(ROUTER_V2_ABI, config.routerV2);
 
@@ -266,7 +266,7 @@ async function buyTokensV2(tokenAddress, amount, wallet) {
 
 // Sell tokens using V2
 async function sellTokensV2(tokenAddress, percentage, wallet) {
-    console.log("🚀 Starting PancakeSwap V2 Sell Operation");
+    console.log("🚀 Starting UniversalSwap V2 Sell Operation");
 
     const routerV2 = new web3.eth.Contract(ROUTER_V2_ABI, config.routerV2);
     const token = new web3.eth.Contract(ERC20_ABI, tokenAddress);
@@ -294,7 +294,7 @@ async function sellTokensV2(tokenAddress, percentage, wallet) {
 
     try {
         // Step 1: Approve tokens for router
-        console.log("🔓 Approving tokens for PancakeSwap V2 Router...");
+        console.log("🔓 Approving tokens for UniversalSwap V2 Router...");
         const maxApproval = '115792089237316195423570985008687907853269984665640564039457584007913129639935'; // 2^256 - 1
 
         const approveTx = await token.methods.approve(config.routerV2, maxApproval).send({
@@ -355,7 +355,7 @@ async function sellTokensV2(tokenAddress, percentage, wallet) {
 
 // Buy tokens using V3
 async function buyTokensV3(tokenAddress, amount, wallet) {
-    console.log("🚀 Starting PancakeSwap V3 Buy Operation");
+    console.log("🚀 Starting UniversalSwap V3 Buy Operation");
 
     const routerV3 = new web3.eth.Contract(ROUTER_V3_ABI, config.routerV3);
     const wbnb = new web3.eth.Contract(WBNB_ABI, config.wbnb);
@@ -385,7 +385,7 @@ async function buyTokensV3(tokenAddress, amount, wallet) {
         console.log(`✅ BNB wrapped to WBNB. TX Hash: ${wrapTx.transactionHash}`);
 
         // Step 2: Approve WBNB for router
-        console.log("🔓 Approving WBNB for PancakeSwap V3 Router...");
+        console.log("🔓 Approving WBNB for UniversalSwap V3 Router...");
         const maxApproval = '115792089237316195423570985008687907853269984665640564039457584007913129639935'; // 2^256 - 1
 
         const approveTx = await wbnb.methods.approve(config.routerV3, maxApproval).send({
@@ -440,7 +440,7 @@ async function buyTokensV3(tokenAddress, amount, wallet) {
 
 // Sell tokens using V3
 async function sellTokensV3(tokenAddress, percentage, wallet) {
-    console.log("🚀 Starting PancakeSwap V3 Sell Operation");
+    console.log("🚀 Starting UniversalSwap V3 Sell Operation");
 
     const routerV3 = new web3.eth.Contract(ROUTER_V3_ABI, config.routerV3);
     const token = new web3.eth.Contract(ERC20_ABI, tokenAddress);
@@ -468,7 +468,7 @@ async function sellTokensV3(tokenAddress, percentage, wallet) {
 
     try {
         // Step 1: Approve tokens for router
-        console.log("🔓 Approving tokens for PancakeSwap V3 Router...");
+        console.log("🔓 Approving tokens for UniversalSwap V3 Router...");
         const maxApproval = '115792089237316195423570985008687907853269984665640564039457584007913129639935'; // 2^256 - 1
 
         const approveTx = await token.methods.approve(config.routerV3, maxApproval).send({
@@ -523,7 +523,7 @@ async function sellTokensV3(tokenAddress, percentage, wallet) {
 
 // Main function that takes command line arguments instead of interactive input
 async function executeSwap() {
-    console.log("=== PancakeSwap Command Line Trading Bot ===");
+    console.log("=== UniversalSwap Command Line Trading Bot ===");
 
     try {
         // Parse command line arguments
@@ -615,7 +615,7 @@ async function executeSwap() {
         // Display summary
         console.log(`\n🔍 Summary:`);
         if (operation === 'buy') {
-            console.log(`Operation: Buy ${tokenBalances.symbol} with ${config.amount} BNB using PancakeSwap ${config.version.toUpperCase()}`);
+            console.log(`Operation: Buy ${tokenBalances.symbol} with ${config.amount} BNB using UniversalSwap ${config.version.toUpperCase()}`);
 
             // Execute buy based on version
             if (config.version === 'v2') {
@@ -629,7 +629,7 @@ async function executeSwap() {
                 return;
             }
 
-            console.log(`Operation: Sell ${config.percentage}% of ${tokenBalances.symbol} (${parseFloat(tokenBalances.formatted.token) * config.percentage / 100} tokens) using PancakeSwap ${config.version.toUpperCase()}`);
+            console.log(`Operation: Sell ${config.percentage}% of ${tokenBalances.symbol} (${parseFloat(tokenBalances.formatted.token) * config.percentage / 100} tokens) using UniversalSwap ${config.version.toUpperCase()}`);
 
             // Execute sell based on version
             if (config.version === 'v2') {
