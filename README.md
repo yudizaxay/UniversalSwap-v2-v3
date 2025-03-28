@@ -109,6 +109,12 @@ The main script supports both V2 and V3 operations:
 node universalSwap.js <operation> <version> [amount/percentage]
 ```
 
+```bash
+npm start           # Run the main universal swap interface
+npm run start:v2    # Run V2 swap operations
+npm run start:v3    # Run V3 swap operations
+```
+
 Examples:
 
 ```bash

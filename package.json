@@ -1,0 +1,44 @@
+{
+  "name": "universalswap-v2-v3",
+  "version": "1.0.0",
+  "description": "A powerful CLI and interactive Code For Universal V2 and V3, enabling automated token swaps on Chain.",
+  "main": "universalSwap.js",
+  "scripts": {
+    "start": "node universalSwap.js",
+    "start:v2": "node universalRouterV2.js",
+    "start:v3": "node universalRouterV3.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yudizaxay/UniversalSwap-v2-v3.git"
+  },
+  "keywords": [
+    "swapv3",
+    "swapv2",
+    "universal",
+    "universal-swap",
+    "universal-swap-v2",
+    "universal-swap-v3",
+    "pancakeswap",
+    "defi",
+    "swap",
+    "trading-bot",
+    "web3",
+    "bnb-chain",
+    "crypto"
+  ],
+  "author": "axay (^_^)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yudizaxay/UniversalSwap-v2-v3/issues"
+  },
+  "homepage": "https://github.com/yudizaxay/UniversalSwap-v2-v3#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "web3": "^4.16.0"
+  }
+}
