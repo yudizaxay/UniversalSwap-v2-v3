@@ -1,10 +1,10 @@
-# 🌟 Universal Trading Bot
+# 🌟 Universal Swap Script
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A powerful CLI and interactive trading bot for both Universal V2 and V3, enabling automated token swaps on BNB Chain.
+A powerful CLI and interactive Swap script for both Universal V2 and V3, enabling automated token swaps on BNB Chain.
 
-![Universal Trading Bot](https://images.ctfassets.net/oc3ca6rftwdu/4whjkXWytP10FiGWGcXUrO/99ae7bda00f8ccf71cd89d0c079de49d/banner.jpeg)
+![Universal Swap Script](https://images.ctfassets.net/oc3ca6rftwdu/4whjkXWytP10FiGWGcXUrO/99ae7bda00f8ccf71cd89d0c079de49d/banner.jpeg)
 
 ## ✨ Features
 
@@ -14,7 +14,7 @@ A powerful CLI and interactive trading bot for both Universal V2 and V3, enablin
 - ⚙️ Gas price and limit configuration
 - 💻 Two modes of operation:
   - Command-line interface for scripting and automation
-  - Interactive interface for manual trading
+  - Interactive interface for manual Swap
 - 📊 Real-time balance tracking and transaction reporting
 - 🔐 Secure local private key management
 - 🧩 Modular design with separate V2 and V3 router implementations
@@ -60,7 +60,7 @@ UNIVERSALSWAP-V2-V3/
 ├── .env.example         # Example environment variables
 ├── .gitignore           # Git ignore file
 ├── LICENSE              # MIT License
-├── pancakeswapUniversal.js  # Main universal trading script
+├── pancakeswapUniversal.js  # Main universal Swap script
 ├── README.md            # This file
 ├── universalRouterV2.js # Dedicated V2 router implementation
 └── universalRouterV3.js # Dedicated V3 router implementation
@@ -75,7 +75,7 @@ Edit the `.env` file with your specific details:
 PRIVATE_KEY=your_private_key_here
 URL=https://your-rpc-url/
 
-# Token and trading parameters
+# Token and Swap parameters
 TOKEN_ADDRESS=your_token_address
 BNB_AMOUNT=bnb_buy_amount
 SELL_PERCENTAGE=100
@@ -101,7 +101,7 @@ GAS_LIMIT=500000
 
 ## 📝 Usage
 
-### Universal Trading Interface
+### Universal Swap Interface
 
 The main script supports both V2 and V3 operations:
 
@@ -163,7 +163,7 @@ node universalRouterV3.js sell 50
 
 ### Interactive Mode
 
-For interactive trading with step-by-step prompts:
+For interactive Swap with step-by-step prompts:
 
 ```bash
 node pancakeswapUniversal.js
@@ -183,7 +183,7 @@ To optimize gas fees:
 ## ⚠️ Security Warnings
 
 - 🔒 **NEVER share your private key** or .env file with anyone
-- 💻 Run this bot only on secure systems
+- 💻 Run this script only on secure systems
 - 🧪 Test with small amounts first
 - 🛡️ Set reasonable slippage values (1-3% recommended)
 - 🔍 Always verify token addresses to avoid scams
@@ -210,9 +210,9 @@ To optimize gas fees:
 
 ## ⚖️ Disclaimer
 
-This software is provided "as is", without warranty of any kind. Use at your own risk. The authors are not responsible for any financial losses incurred while using this bot.
+This software is provided "as is", without warranty of any kind. Use at your own risk. The authors are not responsible for any financial losses incurred while using this script.
 
-Cryptocurrency trading involves substantial risk. This tool is intended for educational and informational purposes only and should not be considered financial advice.
+Cryptocurrency Swap involves substantial risk. This tool is intended for educational and informational purposes only and should not be considered financial advice.
 
 ## 📜 License
 
