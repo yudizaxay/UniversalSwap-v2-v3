@@ -91,7 +91,7 @@ GAS_LIMIT=500000
 | Parameter       | Description                              | Example                   |
 | --------------- | ---------------------------------------- | ------------------------- |
 | PRIVATE_KEY     | Your wallet's private key (keep secret!) | 0x123...                  |
-| URL             | BSC RPC URL                              | https://your-rpc-url.com/ |
+| URL             | Network RPC URL                          | https://your-rpc-url.com/ |
 | TOKEN_ADDRESS   | Contract address of the token to trade   | 0x123...                  |
 | BNB_AMOUNT      | Default BNB amount for buy operations    | 0.01                      |
 | SELL_PERCENTAGE | Default percentage of tokens to sell     | 100                       |
@@ -173,7 +173,7 @@ node pancakeswapUniversal.js
 
 To optimize gas fees:
 
-1. **Lower Gas Price**: Set a lower `GAS_PRICE` in your .env file (3-5 Gwei is usually sufficient on BSC)
+1. **Lower Gas Price**: Set a lower `GAS_PRICE` in your .env file (3-5 Gwei is usually sufficient on Network)
 2. **Check Network Conditions**: During network congestion, increase gas price slightly
 3. **Batch Transactions**: Buy/sell larger amounts less frequently
 4. **Monitor Gas**: Use [BSCScan Gas Tracker](https://bscscan.com/gastracker) to check current gas prices
