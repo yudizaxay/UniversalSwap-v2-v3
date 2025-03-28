@@ -8,7 +8,7 @@ const config = {
     routerV2: '0x10ED43C718714eb63d5aA57B78B54704E256024E', //Router V2 address
     routerV3: '0x1b81D678ffb9C0263b24A97847620C99d213eB14', //Router V3 address
     version: '', // Will be set by commandline
-    amount: process.env.BNB_AMOUNT || '0.1', // Default BNB amount from .env
+    amount: process.env.BNB_AMOUNT || '0.001', // Default BNB amount from .env
     operation: '', // Will be set by commandline
     percentage: parseInt(process.env.SELL_PERCENTAGE || '100'), // Default sell percentage from .env
     fee: 10000, // Default fee tier for V3 (1% = 10000)

@@ -4,7 +4,7 @@ require('dotenv').config();
 // === CONFIG ===
 const config = {
     wbnb: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
-    token: '0x503Fa24B7972677F00C4618e5FBe237780C1df53', // Target token (change this to your V2 token)
+    token: process.env.TOKEN_ADDRESS, // Target token (change this to your V2 token)
     routerV2: '0x10ED43C718714eb63d5aA57B78B54704E256024E', // UniversalSwap V2 Router
     buyAmount: '0.0001', // BNB amount to swap when buying
     sellPercentage: 100, // Percentage of tokens to sell (100 = all)

@@ -4,7 +4,7 @@ require('dotenv').config();
 // === CONFIG ===
 const config = {
     wbnb: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
-    token: process.env.TOKEN, // Target token (WHY)
+    token: process.env.TOKEN_ADDRESS, // Target token (WHY)
     swapRouterV3: '0x1b81D678ffb9C0263b24A97847620C99d213eB14', // SwapRouter V3
     buyAmount: '0.0001', // BNB amount to swap when buying
     sellPercentage: 100, // Percentage of tokens to sell (100 = all)
